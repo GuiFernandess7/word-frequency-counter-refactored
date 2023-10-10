@@ -26,7 +26,7 @@ def print_words(file: str):
         print(f'{word} {freq}')
 
 def print_top(file: str):
-    """Printa a frequência de letras/palavras por ordem rescente de ocorrência"""
+    """Printa a frequência de letras/palavras por ordem crescente de ocorrência"""
     file_content = extract_file_content(file)
     freq_group = get_frequency(file_content)
     sorted_by_freq = dict(sorted(freq_group.items(), key=lambda x:x[1], reverse=True)[:20])
